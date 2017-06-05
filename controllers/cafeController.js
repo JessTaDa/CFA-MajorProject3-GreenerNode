@@ -20,9 +20,9 @@ exports.editCafe = (req, res) => {
 
 exports.createCafe = (req, res) => {
 	// console.log('reqy.body is:', req.body);
-	const name = req.body.cafe_name;
+	const data = req.query.cafe_data;
 	let cafe = new Cafe();
-	cafe.name = name;
+	cafe.data = data;
 	cafe.save()
 		.then(() => {
 			res.redirect('/')

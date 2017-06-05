@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const cafeSchema = new Schema({
-  name: {
+  data: {
     type: String,
     trim: true
   },
@@ -10,6 +10,7 @@ const cafeSchema = new Schema({
     type: Date,
     default: Date.now
   }
+
 });
 
 const Cafe = mongoose.model('Cafe', cafeSchema);

@@ -10,7 +10,7 @@
 
     <form action="/" method="post">
     	<!-- req.body.cafe_name -->
-	    <input type="text" name="cafe_name">
+	    <input type="text" name="cafe_data">
 	    <input type="submit">
     </form>
 
@@ -20,7 +20,7 @@
     	<% }) %> -->
 
       <% cafes.forEach(cafe => { %>
-    		<li><%= cafe %> </li>
+    		<li><%= cafe.data %> </li>
     	<% }) %>
 
     </ul>

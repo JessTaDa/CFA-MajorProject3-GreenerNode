@@ -15,9 +15,14 @@
     </form>
 
     <ul>
-    	<% cafes.forEach(cafe => { %>
+    	<!-- <% cafes.forEach(cafe => { %>
     		<li><%= cafe.name %> <a href="/cafes/<%= cafe._id %>/edit">Edit</a></li>
+    	<% }) %> -->
+
+      <% cafes.forEach(cafe => { %>
+    		<li><%= cafe %> </li>
     	<% }) %>
+
     </ul>
   </body>
 </html>

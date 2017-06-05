@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action="/" method="post">
+    	<!-- req.body.cafe_name -->
+	    <input type="text" name="cafe_name">
+	    <input type="submit">
+    </form>
+
+    <ul>
+    	<% cafes.forEach(cafe => { %>
+    		<li><%= cafe.name %> <a href="/cafes/<%= cafe._id %>/edit">Edit</a></li>
+    	<% }) %>
+    </ul>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const cafeSchema = new Schema({
+const scanSchema = new Schema({
   v: {
     type: String,
     trim: true
@@ -17,13 +17,17 @@ const cafeSchema = new Schema({
     trim: true
   },
 
+  count: {
+    type: Number,
+    trim: true
+  },
+
   created_at: {
     type: Date,
     default: Date.now
   }
-
 });
 
-const Cafe = mongoose.model('Cafe', cafeSchema);
+const Scan = mongoose.model('Scan', scanSchema);
 
-module.exports = Cafe;
+module.exports = Scan;

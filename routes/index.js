@@ -1,16 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-const Cafe = require('../models/Cafe');
-const cafeController = require('../controllers/cafeController');
+const Scan = require('../models/Scan');
+const scanController = require('../controllers/scanController');
 
 
-router.get('/', cafeController.getCafe);
+router.get('/', scanController.getScan);
 
-router.post('/', cafeController.createCafe);
+router.post('/', scanController.createScan);
 
-router.get('/cafes/:id/edit', cafeController.editCafe);
+router.get('/scans/:id/edit', scanController.editScan);
 
-router.post('/cafes/:id/edit', cafeController.updateCafe);
+router.post('/scans/:id/edit', scanController.createScan);
 
 module.exports = router;

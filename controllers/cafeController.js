@@ -29,6 +29,23 @@ exports.createCafe = (req, res) => {
 		})
 	}
 
+exports.createCafe = (req, res) => {
+	// console.log('reqy.body is:', req.body);
+	const v_data = req.query.v;
+	const name_data = req.query.name;
+	const address_data = req.query.address;
+
+	let cafe = new Cafe();
+	cafe.v_data = v_data;
+	cafe.name_data = name_data;
+	cafe.address_data = address_data;
+	cafe.save()
+		.then(() => {
+			res.redirect('/')
+		})
+	}
+	// const cafe_name = req.query.data.name
+
 exports.updateCafe = (req, res) => {
 	// console.log('reqy.body:', req.body);
 	Cafe.findOneAndUpdate({ _id: req.params.id }, req.body, {

@@ -36,9 +36,9 @@ exports.createCafe = (req, res) => {
 	const address_data = req.query.address;
 
 	let cafe = new Cafe();
-	cafe.v_data = v_data;
-	cafe.name_data = name_data;
-	cafe.address_data = address_data;
+	cafe.v = v_data;
+	cafe.name= name_data;
+	cafe.address = address_data;
 	cafe.save()
 		.then(() => {
 			res.redirect('/')

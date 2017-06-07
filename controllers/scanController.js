@@ -34,12 +34,12 @@ exports.editScan = (req, res) => {
 // exports.createScan = (req, res) => {
 // 	// console.log('reqy.body is:', req.body);
 // 	const v_data = req.query.v;
-// 	const cafe_id_data = req.query.cafe_id;
+// 	const cafeid_data = req.query.cafeid;
 // 	const address_data = req.query.address;
 //
 // 	let scan = new Scan();
 // 	scan.v = v_data;
-// 	scan.cafe_id= cafe_id_data;
+// 	scan.cafeid= cafeid_data;
 // 	scan.address = address_data;
 // 	scan.save()
 // 		.then(() => {
@@ -49,26 +49,55 @@ exports.editScan = (req, res) => {
 
 exports.createScan = (req, res) => {
 	console.log(req.query);
-	const v_data = req.query.v;
-	const cafe_id_data = req.query.cafe_id;
+	const version_data = req.query.version;
+	const cafeid_data = req.query.cafeid;
 	const address_data = req.query.address;
 
 	let scan = new Scan();
-	scan.v = v_data;
-	scan.cafe_id= cafe_id_data;
+	scan.version = version_data;
+	scan.cafeid= cafeid_data;
 	scan.address = address_data;
 
-	Scan.findOne({ cafe_id: req.params.cafe_id })
+	Scan.findOne({ cafeid: req.params.cafeid })
 		.then(scan => {
 			console.log(scan);
 			res.status(200).json({scan: scan, length: scan.length});
 		})
-		// .then(scan => {
-		// 	console.log(scan.length);
-		// 	res.status(200).json(scans.length);
-		// })
+
 	// Scan.findOneAndUpdate(
-	// 	{ cafe_id: req.query.cafe_id },
+	// 	{ cafeid: req.query.cafeid },
+	// 	{
+	// 		$inc: { "count" : 1 },
+	// 		upsert:true,
+	// 		returnNewDocument : true
+	// 	}
+	// );
+
+	scan.save()
+		.then(scan => {
+			res.status(302).json(scan)
+		});
+};
+
+exports.createScan_api = (req, res) => {
+	console.log(req.query);
+	const version_data = req.query.version;
+	const cafeid_data = req.query.cafeid;
+	const address_data = req.query.address;
+
+	let scan = new Scan();
+	scan.version = version_data;
+	scan.cafeid= cafeid_data;
+	scan.address = address_data;
+
+	Scan.findOne({ cafeid: req.params.cafeid })
+		.then(scan => {
+			console.log(scan);
+			res.status(200).json({scan: scan, length: scan.length});
+		})
+
+	// Scan.findOneAndUpdate(
+	// 	{ cafeid: req.query.cafeid },
 	// 	{
 	// 		$inc: { "count" : 1 },
 	// 		upsert:true,

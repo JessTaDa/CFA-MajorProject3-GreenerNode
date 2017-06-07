@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const scanSchema = new Schema({
-  v: {
+  version: {
     type: String,
     trim: true
   },
 
-  cafe_id: {
+  cafeid: {
     type: String,
     trim: true
   },

@@ -11,6 +11,6 @@ router.post('/', scanController.createScan);
 
 router.get('/scans/:id/edit', scanController.editScan);
 
-router.post('/scans/:id/edit', scanController.createScan);
+router.post('/api', scanController.createScan_api);
 
 module.exports = router;

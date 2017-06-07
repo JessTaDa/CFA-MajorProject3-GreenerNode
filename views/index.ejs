@@ -9,22 +9,20 @@
     <p>Welcome to <%= title %></p>
     <%= scans %>
 
-    <!-- <form action="/" method="post"> -->
-    	<!-- req.body.scan_cafe_id -->
-	    <!-- <input type="text" name="scan_data"> -->
-	    <!-- <input type="submit"> -->
-    <!-- </form> -->
-    <ul>
-      <%= scans %>
-      <!-- <% scans.forEach(scan => { %>
-        HELLO
-        <% console.log(scan)%>
+    <form action="/" method="post">
+    	req.body.scan_cafeid
+	    <input type="text" name="scan_data">
+	    <input type="submit">
+    </form>
 
-    		<li>  v:<%= scan.v %> </li>
-        <li>  cafe_id:<%= scan.cafe_id %>  </li>
+    <ul>
+      <% scans.forEach(scan => { %>
+        <li>  _id:<%= scan._id %> </li>
+    		<li>  v:<%= scan.version %> </li>
+        <li>  cafeid:<%= scan.cafeid %>  </li>
         <li>  count:<%= scan.count %>  </li>
         <li>  address:<%= scan.address %> </li>
-    	<% }) %> -->
+    	<% }) %>
     </ul>
   </body>
 </html>

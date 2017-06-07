@@ -9,19 +9,18 @@
     <p>Welcome to <%= title %></p>
 
     <form action="/" method="post">
-    	<!-- req.body.scan_name -->
+    	<!-- req.body.scan_cafe_id -->
 	    <input type="text" name="scan_data">
 	    <input type="submit">
     </form>
 
     <ul>
       <% scans.forEach(scan => { %>
-    		<li>v:<%= scan.v %> </li>
-        <li>  name:<%= scan.name %>  </li>
+    		<li>  v:<%= scan.v %> </li>
+        <li>  cafe_id:<%= scan.cafe_id %>  </li>
         <li>  count:<%= scan.count %>  </li>
         <li>  address:<%= scan.address %> </li>
     	<% }) %>
-
     </ul>
   </body>
 </html>

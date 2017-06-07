@@ -7,7 +7,7 @@ const scanSchema = new Schema({
     trim: true
   },
 
-  name: {
+  cafe_id: {
     type: String,
     trim: true
   },

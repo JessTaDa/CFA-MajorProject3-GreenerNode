@@ -8,14 +8,17 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-    <form action="/" method="post">
+    <!-- <form action="/" method="post"> -->
     	<!-- req.body.scan_cafe_id -->
-	    <input type="text" name="scan_data">
-	    <input type="submit">
-    </form>
+	    <!-- <input type="text" name="scan_data"> -->
+	    <!-- <input type="submit"> -->
+    <!-- </form> -->
 
     <ul>
       <% scans.forEach(scan => { %>
+        HELLO
+        <% console.log(scan)%>
+
     		<li>  v:<%= scan.v %> </li>
         <li>  cafe_id:<%= scan.cafe_id %>  </li>
         <li>  count:<%= scan.count %>  </li>

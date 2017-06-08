@@ -58,12 +58,16 @@ exports.createScan = (req, res) => {
 	scan.cafeid= cafeid_data;
 	scan.address = address_data;
 
-	Scan.findOne({ cafeid: req.params.cafeid })
-		.then(scan => {
-			console.log(scan);
-			// res.status(200).json({scan: scan, length: scan.length});
-			Scan.aggregate
-		})
+	Scan.aggregate({$group: {_id: 'cafeid', total: {$sum:1} } })
+	.then(result => {
+		console.log(result);
+	}
+	// Scan.findOne({ cafeid: req.params.cafeid })
+	// 	.then(scan => {
+	// 		console.log(scan);
+	// 		// res.status(200).json({scan: scan, length: scan.length});
+	// 		Scan.aggregate({$group: {_id: 'cafeId', total: {$sum:1} } })
+	// 	})
 
 	// Scan.findOneAndUpdate(
 	// 	{ cafeid: req.query.cafeid },

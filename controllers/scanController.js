@@ -9,7 +9,7 @@ exports.getScan = (req, res) => {
 				console.log(result);
 
 				res.render('index', {
-					title: 'Scans',
+					title: 'Greener',
 					scans: scans,
 					result: result
 				})

@@ -27,7 +27,7 @@
     <ul>
       <% result.forEach(score => { %>
         <li>  cafe name:<%= score._id %>  </li>
-          count:<%= score.total %>
+        <li>  count:<%= score.total %> </li>
       <% }) %>
     </ul>
 
@@ -35,13 +35,14 @@
    <tr>
       <th>Cafe<th><th>Disposible cups saved</th>
    </tr>
-   <!-- <% for (var i = 0; i < quotation.length; i++) { %> -->
-   <% result.forEach(score => { %>
-    <tr>
-      <td> cafe name:<%= score._id %>  </td>
-      <td> count:<%= score.total %> </td>
-    </tr>
-   <% } %>
-</table>
+
+     <% result.forEach(score => { %>
+      <tr>
+        <td> cafe name:<%= score._id %>  </td>
+        <td> count:<%= score.total %> </td>
+      </tr>
+     <% } %>
+    </table>
+
   </body>
 </html>

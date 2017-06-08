@@ -7,6 +7,7 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <p>See how many disposible cups cafes are saving below!</p>
     <!-- <%= scans %> -->
 
     <!-- <form action="/" method="post">
@@ -15,21 +16,32 @@
 	    <input type="submit">
     </form> -->
 
-    <ul>
+    <!-- <ul>
       <% scans.forEach(scan => { %>
     		<li>  version:<%= scan.version %> </li>
         <li>  cafeid:<%= scan.cafeid %>  </li>
         <li>  address:<%= scan.address %> </li>
-        <!-- <li>  result:<%= scan.result %> </li> -->
-
     	<% }) %>
-    </ul>
+    </ul> -->
   <h1>Cafe totals</h1>
     <ul>
       <% result.forEach(score => { %>
         <li>  cafe name:<%= score._id %>  </li>
-        <li>  count:<%= score.total %> </li>
+          count:<%= score.total %>
       <% }) %>
     </ul>
+
+    <table>
+   <tr>
+      <th>Cafe<th><th>Disposible cups saved</th>
+   </tr>
+   <!-- <% for (var i = 0; i < quotation.length; i++) { %> -->
+   <% result.forEach(score => { %>
+    <tr>
+      <td> cafe name:<%= score._id %>  </td>
+      <td> count:<%= score.total %> </td>
+    </tr>
+   <% } %>
+</table>
   </body>
 </html>

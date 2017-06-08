@@ -20,9 +20,16 @@
     		<li>  version:<%= scan.version %> </li>
         <li>  cafeid:<%= scan.cafeid %>  </li>
         <li>  address:<%= scan.address %> </li>
-        <li>  result:<%= scan.result %> </li>
+        <!-- <li>  result:<%= scan.result %> </li> -->
 
     	<% }) %>
+    </ul>
+  <h1>Cafe totals</h1>
+    <ul>
+      <% result.forEach(score => { %>
+        <li>  cafe name:<%= score._id %>  </li>
+        <li>  count:<%= score.total %> </li>
+      <% }) %>
     </ul>
   </body>
 </html>

@@ -96,15 +96,6 @@ exports.createScan_api = (req, res) => {
 			res.status(200).json({scan: scan, length: scan.length});
 		})
 
-	// Scan.findOneAndUpdate(
-	// 	{ cafeid: req.query.cafeid },
-	// 	{
-	// 		$inc: { "count" : 1 },
-	// 		upsert:true,
-	// 		returnNewDocument : true
-	// 	}
-	// );
-
 	scan.save()
 		.then(scan => {
 			res.status(302).json(scan)

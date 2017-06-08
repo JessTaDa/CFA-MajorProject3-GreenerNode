@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -14,6 +16,7 @@ var app = express();
 
 // mongoose.connect('mongodb://localhost/cafes')
 mongoose.connect(process.env.CUPPA_DB);
+console.log(process.env.CUPPA_DB);
 const { connection :db } = mongoose;
 
 db.on('error', console.error.bind(console, 'connection error:'))

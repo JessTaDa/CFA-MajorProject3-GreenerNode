@@ -61,7 +61,8 @@ exports.createScan = (req, res) => {
 	Scan.findOne({ cafeid: req.params.cafeid })
 		.then(scan => {
 			console.log(scan);
-			res.status(200).json({scan: scan, length: scan.length});
+			// res.status(200).json({scan: scan, length: scan.length});
+			Scan.aggregate
 		})
 
 	// Scan.findOneAndUpdate(

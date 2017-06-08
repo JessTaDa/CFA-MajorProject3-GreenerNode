@@ -4,10 +4,19 @@ const Scan = require('../models/Scan');
 exports.getScan = (req, res) => {
 	Scan.find()
 		.then((scans) => {
-			res.render('index', {
-				title: 'Scans',
-				scans: scans
-			})
+
+			Scan.aggregate({$group: {_id: 'cafeid', total: {$sum:1} } })
+			.then(result => {
+				console.log(result);
+
+				res.render('index', {
+					title: 'Scans',
+					scans: scans,
+					summary: result
+				})
+
+			}
+
 		})
 };
 
@@ -47,6 +56,7 @@ exports.editScan = (req, res) => {
 // 		})
 // 	}
 
+
 exports.createScan = (req, res) => {
 	console.log(req.query);
 	const version_data = req.query.version;
@@ -58,10 +68,7 @@ exports.createScan = (req, res) => {
 	scan.cafeid= cafeid_data;
 	scan.address = address_data;
 
-	Scan.aggregate({$group: {_id: 'cafeid', total: {$sum:1} } })
-	.then(result => {
-		console.log(result);
-	}
+
 	// Scan.findOne({ cafeid: req.params.cafeid })
 	// 	.then(scan => {
 	// 		console.log(scan);

@@ -30,5 +30,19 @@
         <li>  count:<%= score.total %> </li>
       <% }) %>
     </ul>
+
+    <table>
+       <tr>
+          <th>CafeName</th><th>Saved</th>
+       </tr>
+
+       <% for (var i = 0; i < result.length; i++) { %>
+        <tr>
+          <td><%= result._id %></td>
+          <td><%= result.total %></td>
+        </tr>
+       <% } %>
+    </table>
+
   </body>
 </html>

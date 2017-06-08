@@ -24,20 +24,19 @@
     	<% }) %>
     </ul> -->
 <h1>Cafe totals</h1>
-    <ul>
+    <!-- <ul>
       <% result.forEach(score => { %>
         <li>  cafe name:<%= score._id %>  </li>
         <li>  count:<%= score.total %> </li>
       <% }) %>
-    </ul>
+    </ul> -->
 
     <table>
        <tr>
-          <th>CafeName</th><th></th><th>Saved</th>
+          <th>CafeName</th><<th>Saved</th>
        </tr>
          <% result.forEach(score => { %>
         <tr>
-          <td></td>
           <td>  <%= score._id %>  </td>
           <td>  <%= score.total %> </td>
         </tr>

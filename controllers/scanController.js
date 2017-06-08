@@ -4,8 +4,7 @@ const Scan = require('../models/Scan');
 exports.getScan = (req, res) => {
 	Scan.find()
 		.then((scans) => {
-
-			Scan.aggregate({$group: {_id: 'cafeid', total: {$sum:1} } })
+			Scan.aggregate({$group: {_id: 'cafeid', total: {$sum:1} }})
 			.then(result => {
 				console.log(result);
 
@@ -14,11 +13,9 @@ exports.getScan = (req, res) => {
 					scans: scans,
 					summary: result
 				})
-
-			}
-
-		})
-};
+			})
+	})
+}
 
 exports.editScan = (req, res) => {
 	Scan.findOne({ _id: req.params.id })

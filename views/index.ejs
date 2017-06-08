@@ -35,11 +35,10 @@
        <tr>
           <th>CafeName</th><th>Saved</th>
        </tr>
-
-       <% for (var i = 0; i < result.length; i++) { %>
+         <% result.forEach(score => { %>
         <tr>
-          <td><%= result._id %></td>
-          <td><%= result.total %></td>
+          <td>  cafe name:<%= score._id %>  </td>
+          <td>  count:<%= score.total %> </td>
         </tr>
        <% } %>
     </table>

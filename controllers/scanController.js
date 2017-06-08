@@ -11,7 +11,7 @@ exports.getScan = (req, res) => {
 				res.render('index', {
 					title: 'Scans',
 					scans: scans,
-					summary: result
+					result: result
 				})
 			})
 	})

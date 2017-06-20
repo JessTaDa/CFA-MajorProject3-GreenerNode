@@ -28,6 +28,7 @@ With enough data collected, we will be able to gain a better understanding of cu
 
 
 ### Budgeting, scheduling & planning:
+##### Timeline: two weeks
 Trello was used throughout the project for brainstorming and grooming. Userstories were catagorised into cards and assigned as an MVP feature or future feature. Trello was also used to keep track of progress throughout project implementation.
 
 ![alt tag](http://i.imgur.com/u5CkcCB.png)

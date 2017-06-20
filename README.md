@@ -1,4 +1,6 @@
-#  Greener - CFA Major Project 3
+#  Greener - CFA Major Project 3 - node component
+
+For react component, go to https://github.com/JessTaDa/CFA-greener-react-native
 
 ### Problem Definition
 

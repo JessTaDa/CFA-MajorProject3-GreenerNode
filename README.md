@@ -17,33 +17,33 @@ As the customer is doing the scanning with their smartphones, cafes who wish to 
 With enough data collected, we will be able to gain a better understanding of customer behaviour around reusable cups. What percentage of customers bring their own cups? How many disposable cups are cafes saving by offering the discount? Do they make this money back as well as contribute positively to a less waste Australia?
 
 # Application Design
-#### Wireframe sketches
+### Wireframe sketches
 
-###### Customer Portal (Client Portal):
+##### Customer Portal (Client Portal):
 
 ![alt tag](http://imgur.com/IZhLeWh.png)
 
-###### Cafe Portal (Vendor Portal):
+##### Cafe Portal (Vendor Portal):
 ![alt tag](http://imgur.com/wfeKcMg.png)
 
 
-#### Budgeting, scheduling & planning:
+### Budgeting, scheduling & planning:
 Trello was used throughout the project for brainstorming and grooming. Userstories were catagorised into cards and assigned as an MVP feature or future feature. Trello was also used to keep track of progress throughout project implementation.
 
 ![alt tag](http://i.imgur.com/u5CkcCB.png)
 
-#### Use of code quality tools:
+### Use of code quality tools:
 Code climate was used frequently to ensure code quality was acceptable.
 ![alt tag](http://imgur.com/bMxqUV3.png)
 
-#### Entity Relationshio Diagram:
+### Entity Relationship Diagram:
 An entity relationship diagram was drafted to map out the layout of the application.
 ![alt tag](http://imgur.com/wg31J3c.png)
 
-#### Client interaction
+# Client interaction
 It is important to ensure the app built would solve the client's problem effectively. To ensure the project was on track to do this, consistent clear communication with the client is paramount. A client interaction diary was kept throughout the course of this project, noting down all accounts of interaction. As well, client confirmation was saught before the project obtained go-ahead status.
 
-##### Client interaction diary
+### Client interaction diary
 > (25/05/2017)
 Emailed city of Sydney as this was where I saw the list of Sydney cafes offering a discount for reusable cups. This is where I got the idea from.
 
@@ -65,7 +65,10 @@ Spoke to Justin over the phone. He apologises for being super busy and is attend
 >(07/06/2017)
 Sent Justin my official project scope and he accepted it over email
 
-##### Client scope confirmation
+### Client scope confirmation
 
 ![alt tag](http://imgur.com/KmfZDuc.png)
 ![alt tag](http://imgur.com/CWIq7S8.png)
+
+
+
